@@ -52,11 +52,15 @@ fork.
 These fixes live outside the repository and are recorded here for
 reproducibility on this machine:
 
-- **AMR / OpenDesign Cloud sign-in** — linked `~/.local/bin/vela` to the real
-  `@powerformer/vela-cli` entry
-  (`node_modules/.pnpm/@powerformer+vela-cli@0.0.33/node_modules/@powerformer/vela-cli/bin/vela.cjs`).
-  The pnpm `.bin/vela` shim cannot be symlinked (it resolves paths relative to
-  its own directory). Daemon then reports `amr.available = true`.
+- **AMR / OpenDesign Cloud sign-in** — `~/.local/bin/vela` is a small wrapper
+  script that execs
+  `node <repo>/tools/pack/node_modules/@powerformer/vela-cli/bin/vela.cjs`.
+  It deliberately does **not** point at the versioned pnpm store path (a
+  `pnpm install` bump left the old `@powerformer+vela-cli@0.0.33` path dangling,
+  which is exactly how `amr` regressed to `not-on-path` after the resync), and
+  it does not symlink pnpm's `.bin/vela` shim (that shim resolves paths relative
+  to its own directory). Current version: `0.1.3`. The daemon then reports
+  `amr.available = true`.
 - **DeepSeek Harness runtime** — `od agent setup deepseek-harness` installed
   `@open-design/dsh-runtime` v0.1.0 into `~/.dsh/profiles/open-design/`; daemon
   spawns `dsh --profile open-design --stdio` (stream `dsh-profile-jsonl`).
