@@ -1,9 +1,9 @@
 # PATCHES.md — fork-local changes vs upstream
 
 **Fork:** `thomasvan/open-design` (parent repo: `nexu-io/open-design`)
-**Upstream base at patch time:** `a8d94dfa6` (`fix(updater): make payload
-runtime handoff atomic (#8348)`) — re-synced on 2026-08-25, +291 upstream commits
-**Date:** 2026-08-24 (last updated 2026-08-25)
+**Upstream base at patch time:** `53231d40b` (`docs(readme): refresh product
+tour and 13 translations (#8534)`) — re-synced on 2026-10-03 by merge, +22 upstream commits
+**Date:** 2026-08-24 (last updated 2026-10-03)
 
 This file records every change this fork carries on top of upstream, and is
 the reference for what is being contributed back. It is maintained by the
