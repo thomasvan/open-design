@@ -1,9 +1,9 @@
 # PATCHES.md — fork-local changes vs upstream
 
 **Fork:** `thomasvan/open-design` (parent repo: `nexu-io/open-design`)
-**Upstream base at patch time:** `53231d40b` (`docs(readme): refresh product
-tour and 13 translations (#8534)`) — re-synced on 2026-10-03 by merge, +22 upstream commits
-**Date:** 2026-08-24 (last updated 2026-10-03)
+**Upstream base at patch time:** `77b8eb889` (`open-design-v0.27.0`, `fix(pack):
+restore Vela CLI 0.1.8 for public sharing (#9219) (#9221)`) — re-synced on 2026-11-09 by merge, +127 upstream commits
+**Date:** 2026-08-24 (last updated 2026-11-09)
 
 This file records every change this fork carries on top of upstream, and is
 the reference for what is being contributed back. It is maintained by the
